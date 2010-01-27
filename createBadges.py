@@ -95,7 +95,7 @@ class BadgeImage(object):
             self.img.save(filename)
             return
 
-        newimg = Image.new("RGB", (self.img.size[0]*2+20, self.img.size[1]), FOLD_COLOR)
+        newimg = Image.new("CMYK", (self.img.size[0]*2+20, self.img.size[1]), FOLD_COLOR)
         newimg.paste(self.img, (0,0))
         newimg.paste(self.img, (self.img.size[0]+20,0))
         newimg.save(filename)
